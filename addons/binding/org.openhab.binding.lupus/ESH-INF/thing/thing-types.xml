@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="lupus"
+						  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						  xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+						  xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+	<!-- Lupus Thing Type -->
+    <thing-type id="xt2">
+        <label>Lupus XT2</label>
+        <description>Allows to control Lupus XT2</description>
+        <channels>
+            <channel id="mode_a1" typeId="mode_a1" />
+            <channel id="mode_a2" typeId="mode_a2" />
+            <channel id="state_a1" typeId="state_a1" />
+            <channel id="state_a2" typeId="state_a2" />
+            <channel id="state_a1_msg" typeId="state_a1_msg" />
+            <channel id="state_a2_msg" typeId="state_a2_msg" />
+        </channels>
+
+        <config-description>
+            <parameter name="hostname" type="text" required="true">
+                <label>Host name or IP of Lupus </label>
+                <description>Network address of the Lupus XT2.</description>
+            </parameter>
+            <parameter name="user" type="text" required="true">
+                <label>Username</label>
+                <description>Username for Lupus account.</description>
+            </parameter>
+            <parameter name="pass" type="text" required="true">
+                <label>Password</label>
+                <description>Password for Lupus account.</description>
+            </parameter>
+            <parameter name="port" type="integer">
+                <label>CID Port</label>
+                <description>TCP listening port for getting messages over CID protocol.</description>
+                <default>10508</default>
+            </parameter>
+        </config-description>
+    </thing-type>
+
+	<!-- Lupus Channel Type -->
+	<channel-type id="mode_a1">
+		<item-type>Number</item-type>
+		<label>Mode A1</label>
+		<description>Mode of Lupus Area 1</description>
+	</channel-type>
+    <channel-type id="mode_a2">
+        <item-type>Number</item-type>
+        <label>Mode A2</label>
+        <description>Mode of Lupus Area 2</description>
+    </channel-type>
+    <channel-type id="state_a1">
+        <item-type>Number</item-type>
+        <label>State A1</label>
+        <description>State of Lupus Area 1</description>
+    </channel-type>
+    <channel-type id="state_a2">
+        <item-type>Number</item-type>
+        <label>State A2</label>
+        <description>State of Lupus Area 2</description>
+    </channel-type>
+    <channel-type id="state_a1_msg">
+        <item-type>String</item-type>
+        <label>State A1</label>
+        <description>State of Lupus Area 1</description>
+    </channel-type>
+    <channel-type id="state_a2_msg">
+        <item-type>String</item-type>
+        <label>State A2</label>
+        <description>State of Lupus Area 2</description>
+    </channel-type>
+
+</thing:thing-descriptions>
