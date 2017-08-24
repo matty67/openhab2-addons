@@ -12,7 +12,7 @@ lupus:xt2:7b2410cf [hostname="<lupus_hostname>", user="<lupus_user>", pass="<lup
 
 No binding config needed.
 
-```
+
 # Configuration for the Lupus Binding
 #
 Add a normal user to your XT2 and edit the entries <lupus_hostname>, <lupus_user> and <lupus_password> in your things file.
